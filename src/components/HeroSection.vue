@@ -87,7 +87,8 @@ export default {
             hero_image : hero_image,
             hero_image_back : hero_image_back,
             Heart : Heart ,
-            Calories : Calories
+            Calories : Calories,
+ 
         }
     }
 }
