@@ -5,9 +5,9 @@
     <ProgramSection />
     <ReasonSection />
     <PlansSection />
-    
-    <TestimonialSection />
 
+    <TestimonialSection />
+    <JoinSection />
   </div>
 </template>
 
@@ -18,6 +18,8 @@ import ProgramSection from '../components/ProgramSection.vue'
 import ReasonSection from '../components/ReasonSection.vue'
 import PlansSection from '../components/PlansSection.vue'
 import TestimonialSection from '../components/TestimonialSection.vue'
+import JoinSection from '../components/JoinSection.vue'
+
 
 export default {
   
@@ -26,7 +28,8 @@ export default {
     ProgramSection,
     ReasonSection,
     PlansSection,
-    TestimonialSection
+    TestimonialSection,
+    JoinSection
   }
   
 }
