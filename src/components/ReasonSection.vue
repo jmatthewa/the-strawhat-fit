@@ -45,10 +45,10 @@
 </template>
 <script>
 
-import image1 from '../assets/image1.png'
-import image2 from '../assets/image2.png'
-import image3 from '../assets/image3.png'
-import image4 from '../assets/image4.png'
+import image1 from '../assets/luffy.jpg'
+import image2 from '../assets/luffy2.jpg'
+import image3 from '../assets/luffy3.jpg'
+import image4 from '../assets/luffy4.jpg'
 import tick from '../assets/tick.png'
 import nb from '../assets/nb.png'
 import adidas from '../assets/adidas.png'
@@ -71,7 +71,7 @@ export default {
 </script>
 <style>
     .Reasons {
-        margin-top: 2rem;
+        margin-top: 5rem;
         padding: 0 2rem;
         display: flex;
         gap: 2rem;
@@ -87,17 +87,18 @@ export default {
         object-fit: cover;
     }
     .left-r>:nth-child(1){
-        width: 12rem;
+        /* width: 12rem; */
         grid-row: 1/3;
         height: 28rem;
     }
     .left-r>:nth-child(2){
-       width: auto;
+       width: 100%;
        height: 16rem;
        grid-column: 2/4;
     }
     .left-r>:nth-child(3){
        width: 14rem;
+       height: 11.2rem;
        grid-column: 2/3;
     }
     .left-r>:nth-child(4){

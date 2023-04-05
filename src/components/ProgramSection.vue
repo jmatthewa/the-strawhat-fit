@@ -28,10 +28,10 @@
 <script>
 
 import { programsData } from '../data/programsData.js'
-import dumbell from '../assets/dumbell.svg'
-import running from '../assets/runing.svg'
+import dumbell from '../assets/dumbell.png'
+import running from '../assets/running.png'
 import flame from '../assets/flame.svg'
-import heart from '../assets/heartHealth.svg'
+import heart from '../assets/hearthealth.png'
 
 export default {
 
@@ -48,7 +48,7 @@ export default {
 </script>
 <style>
     .Programs {
-        margin-top: 2rem;
+        margin-top: 5rem;
         display: flex;
         flex-direction: column;
         gap: 2rem;

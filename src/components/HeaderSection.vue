@@ -1,6 +1,6 @@
 <template>
    <div class="header">
-        <h2 class="logo">James CLub</h2>
+      <img src="../assets/logo1.png" class="logo">
 
         <ul class="header-menu">
             <li>Home</li>
@@ -23,9 +23,13 @@ export default {
         justify-content: space-between;
     }
     .logo {
+  
         width: 10rem;
         height: 3rem;
+
+        
     }
+  
     .header-menu {
         list-style: none;
         display: flex;

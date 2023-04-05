@@ -8,6 +8,7 @@
 
     <TestimonialSection />
     <JoinSection />
+    <FooterSection />
   </div>
 </template>
 
@@ -19,7 +20,7 @@ import ReasonSection from '../components/ReasonSection.vue'
 import PlansSection from '../components/PlansSection.vue'
 import TestimonialSection from '../components/TestimonialSection.vue'
 import JoinSection from '../components/JoinSection.vue'
-
+import FooterSection from '@/components/FooterSection.vue'
 
 export default {
   
@@ -29,7 +30,8 @@ export default {
     ReasonSection,
     PlansSection,
     TestimonialSection,
-    JoinSection
+    JoinSection,
+    FooterSection
   }
   
 }

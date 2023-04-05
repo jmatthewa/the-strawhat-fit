@@ -77,6 +77,7 @@ export default {
         display: flex;
         gap: 1rem;
         padding: 0 2rem;
+        height: 30rem;
     }
 
     .left-t {
@@ -103,6 +104,10 @@ export default {
         text-align: justify;
         letter-spacing: 2px;
         line-height: 40px;
+    }
+    .left-t>:nth-child(5){
+        margin-top: auto;
+        align-self: flex-end;
     }
 
     .right-t {

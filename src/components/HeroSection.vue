@@ -1,6 +1,6 @@
 <template>
     <div class="hero">
-
+    <div class="blur hero-blur"></div>
         <div class="left-h">
            <HeaderSection />
 
@@ -73,7 +73,7 @@
 </template>
 <script>
 import HeaderSection from './HeaderSection.vue';
-import hero_image from '../assets/hero_image.png';
+import hero_image from '../assets/luffyhero.png';
 import hero_image_back from '../assets/hero_image_back.png';
 import Heart from '../assets/heart.png';
 import Calories from '../assets/calories.png'
@@ -97,6 +97,11 @@ export default {
     .hero {
         display:flex;
         justify-content: space-between;
+    }
+    .hero-blur {
+        width: 22rem;
+        height: 30rem;
+        
     }
     .left-h {
         padding: 2rem;

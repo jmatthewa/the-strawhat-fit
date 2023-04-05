@@ -51,6 +51,7 @@ export default {
         position: relative;
     }
     .programs-header {
+        margin-top: 3rem;
         gap: 2rem;
     }
 
