@@ -5,7 +5,24 @@
            <HeaderSection />
 
            <div class="the-best-ad">
-            <div></div>
+            <div v-motion
+            :initial="{
+                left: '238px'
+            }"
+            :enter="{ 
+                left: '8px',        
+              transition: {
+                    type: 'tween',
+                    duration: 3000
+                }
+            }"
+    
+    
+       
+
+            >
+
+            </div>
             <span>the best fitness club in the town</span>
            </div>
 
@@ -50,16 +67,51 @@
         <div class="right-h">
             <button class="btn">Join Now</button>
 
-            <div class="heart-rate">
+            <div v-motion 
+            :initial="{
+                right: '-1rem'
+            }"
+            :enter="{
+               right: '4rem',          
+              transition: {
+                    type: 'spring',
+                    duration: 3000
+                }
+            }"
+          
+            
+            class="heart-rate">
                 <img :src="Heart" alt="">
                 <span>Heart Rate</span>
                 <span>116 bpm</span>
             </div>
 
             <img :src="hero_image" alt="" class="hero-image">
-            <img :src="hero_image_back" alt="" class="hero-image-back">
+            <img  v-motion 
+            :initial="{
+                right: '11rem'
+            }"
+            :enter="{
+               right: '20rem',          
+              transition: {
+                    type: 'spring',
+                    duration: 3000
+                }
+            }"
+            :src="hero_image_back" alt="" class="hero-image-back">
 
-            <div class="calories">
+            <div  v-motion 
+            :initial="{
+                right: '37rem'
+            }"
+            :enter="{
+               right: '28rem',          
+              transition: {
+                    type: 'spring',
+                    duration: 3000
+                }
+            }"
+            class="calories">
                 <img :src="Calories" alt="">
                 <div>
                     
@@ -77,6 +129,8 @@ import hero_image from '../assets/luffyhero.png';
 import hero_image_back from '../assets/hero_image_back.png';
 import Heart from '../assets/heart.png';
 import Calories from '../assets/calories.png'
+// import { ref } from 'vue';
+// import { useMotion } from '@vueuse/motion';
 
 export default {
     components :{
@@ -88,7 +142,7 @@ export default {
             hero_image_back : hero_image_back,
             Heart : Heart ,
             Calories : Calories,
- 
+  
         }
     }
 }
@@ -236,7 +290,7 @@ export default {
 
     .hero-image {
         position: absolute;
-        top:10rem;
+        top:7rem;
         right: 8rem;
         width: 23rem;
     }

@@ -1,6 +1,7 @@
 <template>
     <div class="plans-containter">
-
+        <div class="blur plans-blur-1"></div>
+        <div class="blur plans-blur-2"></div>
         <div class="programs-header">
             <span class="stroke-text">READY TO START</span>
             <span>YOUR JOURNEY</span>
@@ -9,7 +10,7 @@
 
         <div class="plans">
             <div class="plan" v-for="plan in plansData" :key="plan.id">
-                
+                <img :src="require(`../assets/${plan.fileName}`)" />
                 <span>{{ plan.name }}</span>
                 <span>$ {{ plan.price }}</span>
 
@@ -50,6 +51,15 @@ export default {
         gap: 4rem;
         position: relative;
     }
+    .plans-blur-1 {
+        width: 32rem;
+        height: 23rem;
+    }
+    .plans-blur-2{
+        width: 32rem;
+        height: 23rem;
+        right: -1rem;
+    }
     .programs-header {
         margin-top: 3rem;
         gap: 2rem;
@@ -78,19 +88,22 @@ export default {
         background: var(--planCard);
         transform: scale(1.1);
     }
-
+    .plan > img {
+        width: 2rem;
+        height: 2rem;
+    }
     .plan:nth-child(2)>button{
         color: orange;
     }
-    .plan>:nth-child(1){
+    .plan>:nth-child(2){
         font-size: 1rem;
         font-weight: bold;
     }
-    .plan>:nth-child(2){
+    .plan>:nth-child(3){
         font-size: 3rem;
         font-weight: bold;
     }
-    .plan>:nth-child(4){
+    .plan>:nth-child(5){
         font-size: 0.8rem;
     }
     .features{

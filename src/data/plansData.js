@@ -1,6 +1,7 @@
 export const plansData = [
     {
       id: 1,
+      fileName: "heartplus.png",
       name: "BASIC PLAN",
       price: "25",
       features: [
@@ -11,6 +12,7 @@ export const plansData = [
     },
     {
       id: 2,
+      fileName: "crown.png",
       name: "PREMIUM PLAN",
       price: "30",
       features: [
@@ -21,6 +23,7 @@ export const plansData = [
     },
     {
       id: 3,
+      fileName: "dumbell.svg",
       name: "PRO PLAN",
       price: "45",
       features: [

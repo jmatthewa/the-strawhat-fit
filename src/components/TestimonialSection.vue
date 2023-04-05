@@ -4,7 +4,17 @@
             <span>Testimonials</span>
             <span class="stroke-text">What they</span>
             <span>say about us</span>
-            <span>
+            <span v-motion 
+            :key="selected"
+            :initial="{opacity: 0,x: -100}"
+            :enter="{
+               opacity: 1,
+               x: 0,         
+              transition: {
+                    type: 'spring',
+                    duration: 2000
+                }
+            }">
 
                 {{ testimonialsData[selected].review }}
             </span>
@@ -16,9 +26,56 @@
             </span>
         </div>
         <div class="right-t">
-            <div></div>
-            <div></div>
-            <img :src="images[selected]" alt="">
+            <div  v-motion 
+           
+            :initial="{
+                opacity: 0,
+                x: -100
+            }"
+            :enter="{
+               opacity: 1,
+               x: 0,         
+              transition: {
+                    type: 'spring',
+                    duration: 2000
+                }
+            }"></div>
+            <div v-motion 
+            :initial="{
+                opacity: 0,
+                x: 100
+            }"
+            :enter="{
+               opacity: 1,
+               x: 0,         
+              transition: {
+                    type: 'spring',
+                    duration: 2000
+                }
+            }"></div>
+            <img  v-motion 
+            :key="testimonialsData[selected].id"
+            :initial="{
+                opacity: 0,
+                x: 100
+            }"
+            :animated="{
+                opacity: 1,
+                x: 0
+            }"
+            :exit="{
+                opacity: 0, 
+                x: -100
+            }"
+             :enter="{
+               opacity: 1,
+               x: 0,         
+              transition: {
+                    type: 'spring',
+                    duration: 2000
+                }
+            }"
+            :src="require(`../assets/${testimonialsData[selected].imageUrl}`)" >
             
             <div class="arrows">
                 <img :src="leftArrow" @click="previous" alt="">
@@ -31,16 +88,14 @@
 
 import { testimonialsData } from '../data/testimonialsData.js'
 
-import image1 from "../assets/t-image1.jpg";
-import image2 from "../assets/t-image2.jpg";
-import image3 from "../assets/t-image3.jpg";
+
 import leftArrow from '../assets/leftArrow.png'
 import rightArrow from '../assets/rightArrow.png'
 
 export default {
     data() {
         return {
-            images : [image1,image2,image3],
+   
             testimonialsData : testimonialsData,
             selected : 0,
             leftArrow : leftArrow,
@@ -51,14 +106,15 @@ export default {
         previous() {
             if(this.selected == 0){
           
-               this.selected = this.images.length -1
+               this.selected = this.testimonialsData.length -1
             } else {
                 this.selected--
+                console.log(this.selected);
             }
             
         },
         addOne() {
-            if(this.selected == this.images.length -1){
+            if(this.selected == this.testimonialsData.length -1){
                 this.selected= 0
            
             }else {

@@ -3,14 +3,16 @@
         <hr/>
         <div class="footer">
             <div class="social-links">
-                <img :src="github" alt="">
-                <img :src="instagram" alt="">
-                <img :src="linkedin" alt="">
+                <a href="https://github.com/jmatthewa"><img :src="github" alt=""></a>
+                <a href=""><img :src="instagram" alt=""></a>
+                <a href="https://linkedin.com/in/james-matthew-atanacio-0b0882173"><img :src="linkedin" alt=""></a>
             </div>
             <div class="logo-f">
                 created by: james matthew &copy;  {{ date }}
             </div>
             </div>
+            <div class="blur blur-f-1"></div>
+            <div class="blur blur-f-2"></div>
     </div>
 </template>
 <script>
@@ -53,7 +55,7 @@ export default {
         gap: 4rem;
 
     }
-    .social-links > img {
+    .social-links > a > img {
         width: 2rem;
         height: 2rem;
         cursor: pointer;
@@ -65,5 +67,22 @@ export default {
         width: 10rem;
 
 
+    }
+
+    .blur-f-1{
+        right: 15%;
+        width: 26rem;
+        height: 12rem;
+        bottom: 0;
+        filter: blur(200px);
+        background: red;
+    }
+    .blur-f-2{
+        left: 15%;
+        width: 26rem;
+        height: 12rem;
+        bottom: 0;
+        filter: blur(200px);
+        background: rgb(225, 115, 0)
     }
 </style>
