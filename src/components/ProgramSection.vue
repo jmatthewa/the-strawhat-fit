@@ -10,7 +10,7 @@
 
         <div class="programs-categories"  >
             <div class="category" v-for="program in programsData" :key="program.heading">
-                <img src="../assets/dumbell.svg" alt="">
+                <img :src="icons[program.id]" alt="">
                 <span>{{ program.heading }}</span>
                 <span>{{ program.details }}</span>
     
@@ -28,11 +28,16 @@
 <script>
 
 import { programsData } from '../data/programsData.js'
+import dumbell from '../assets/dumbell.svg'
+import running from '../assets/runing.svg'
+import flame from '../assets/flame.svg'
+import heart from '../assets/heartHealth.svg'
 
 export default {
 
     data() {
         return {
+            icons : [dumbell,running,flame,heart],
             programsData : programsData
 
         }

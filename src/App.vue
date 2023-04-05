@@ -24,6 +24,7 @@
   flex-direction: column;
   gap: 6rem;
   overflow: hidden;
+
 }
 ::-webkit-scrollbar{
   display: none;
@@ -35,6 +36,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
 }
 
 code {

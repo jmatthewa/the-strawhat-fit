@@ -1,9 +1,12 @@
 <template>
   <div>
     <HeroSection />
+
     <ProgramSection />
     <ReasonSection />
     <PlansSection />
+    
+    <TestimonialSection />
 
   </div>
 </template>
@@ -14,6 +17,7 @@ import HeroSection from '../components/HeroSection.vue'
 import ProgramSection from '../components/ProgramSection.vue'
 import ReasonSection from '../components/ReasonSection.vue'
 import PlansSection from '../components/PlansSection.vue'
+import TestimonialSection from '../components/TestimonialSection.vue'
 
 export default {
   
@@ -21,7 +25,8 @@ export default {
     HeroSection,
     ProgramSection,
     ReasonSection,
-    PlansSection
+    PlansSection,
+    TestimonialSection
   }
   
 }
