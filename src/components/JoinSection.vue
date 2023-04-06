@@ -42,6 +42,8 @@ export default {
         display: flex;
         padding: 0 2rem;
         gap: 10rem;
+ 
+        justify-content: center;
     }
     .left-j {
         color: white;
@@ -86,4 +88,19 @@ export default {
         color: white;
     }
 
+@media screen and (max-width: 768px) {
+    .Join{
+        margin-top: 35rem;
+        flex-direction: column;
+        gap: 5rem;
+
+    }
+    .left-j{
+        font-size: x-large;
+        flex-direction: column;
+    }
+    .right-j {
+        padding: 2rem;
+    }
+}
 </style>

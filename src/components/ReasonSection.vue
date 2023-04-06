@@ -72,9 +72,12 @@ export default {
 <style>
     .Reasons {
         margin-top: 5rem;
-        padding: 0 2rem;
+        padding: 5rem;
         display: flex;
-        gap: 2rem;
+        gap:2rem;
+        margin-right: 10%;
+        margin-left: 10%;
+    
     }
     .left-r {
         flex: 1 1;
@@ -82,6 +85,7 @@ export default {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
         grid-auto-rows: 1fr;
+
     }
     .left-r>img {
         object-fit: cover;
@@ -89,23 +93,23 @@ export default {
     .left-r>:nth-child(1){
         /* width: 12rem; */
         grid-row: 1/3;
-        height: 28rem;
+        height: 100%;
     }
     .left-r>:nth-child(2){
        width: 100%;
-       height: 16rem;
+       height: 100%;
        grid-column: 2/4;
     }
     .left-r>:nth-child(3){
        width: 14rem;
-       height: 11.2rem;
+       height: 100%;
        grid-column: 2/3;
     }
     .left-r>:nth-child(4){
        width: 10rem;
        grid-row: 2;
        grid-column:3/4;
-       height: 11.2rem;
+       height: 100%;
     }
 
     .right-r {
@@ -149,5 +153,34 @@ export default {
     }
     .partners > img {
         width: 2.5rem;
+    }
+    @media screen and (max-width: 768px) {
+        .Reasons {
+            flex-direction: column;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 1rem;
+        }
+        .left-r {
+            grid-auto-rows: auto;
+            overflow: hidden;
+
+        }
+        .left-r > :nth-child(1){
+            width: 7rem;
+            height: 17rem;
+        }
+        .left-r > :nth-child(2){
+            width: 15rem;
+            height: 10rem;
+        }
+        .left-r > :nth-child(3){
+            width: 7rem;
+            height: 6rem;
+        }
+        .left-r > :nth-child(4){
+            width: 7rem;
+            height: 6rem;
+        }
     }
 </style>

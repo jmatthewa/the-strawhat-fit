@@ -5,9 +5,10 @@
            <HeaderSection />
 
            <div class="the-best-ad">
-            <div v-motion
+            <div 
+            v-motion
             :initial="{
-                left: '238px'
+                left: mobile ? `140px` : '238px'
             }"
             :enter="{ 
                 left: '8px',        
@@ -16,9 +17,6 @@
                     duration: 3000
                 }
             }"
-    
-    
-       
 
             >
 
@@ -132,6 +130,9 @@ import Calories from '../assets/calories.png'
 // import { ref } from 'vue';
 // import { useMotion } from '@vueuse/motion';
 
+const mobile = window.innerWidth<=768 ? true : false
+
+
 export default {
     components :{
         HeaderSection
@@ -142,7 +143,7 @@ export default {
             hero_image_back : hero_image_back,
             Heart : Heart ,
             Calories : Calories,
-  
+            mobile : mobile
         }
     }
 }
@@ -151,6 +152,8 @@ export default {
     .hero {
         display:flex;
         justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
     }
     .hero-blur {
         width: 22rem;
@@ -329,4 +332,79 @@ export default {
         color: white;
         font-size: 1.5rem;
     }
+
+
+
+    @media screen and (max-width: 768px){
+        .hero {
+            flex-direction: column;
+            margin-left: 0;
+        margin-right: 0;
+        }
+        .hero-blur {
+            width: 14rem;
+        }
+        .the-best-ad {
+            margin-top: 2rem;
+            font-size: small;
+            text-align: center;
+            align-self: center;
+            transform: scale(0.8);
+        }
+        .hero-text {
+            margin-top: 2rem;
+            font-size: xx-large;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-text > div:nth-child(3){
+            font-size: small;
+            font-weight: 200;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        .hero-buttons{
+            justify-content: center;
+        }
+        .figures > div > span:nth-of-type(1){
+            font-size: large;
+
+        }
+        .figures > div > span:nth-of-type(2){
+            font-size: x-small;
+            
+        }
+        .right-h {
+            position: relative;
+            background: none;
+        }
+        .heart-rate{
+            left: 1rem;
+            top: 2rem;
+        }
+        .calories {
+            position: relative;
+            top: 5rem;
+            left: 2rem;
+        }
+        .calories > img {
+            width: 2rem;
+        }
+        .calories>div>:nth-child(2){
+            color: white;
+            font-size: 1rem;
+        }
+        .hero-image{
+            position: relative;
+            width: 15rem;
+            left: 7rem;
+            top: 4rem;
+            align-self: center;
+        }
+        .hero-image-back{
+            width: 15rem;
+            left: 2rem;
+        }
+    }
+
 </style>

@@ -52,6 +52,8 @@ export default {
         flex-direction: column;
         gap: 2rem;
         padding: 0 2rem;
+        margin-right: 10%;
+        margin-left: 10%;
     }
 
     .programs-header {
@@ -106,4 +108,27 @@ export default {
         background: var(--planCard);
         cursor: pointer;
     }
+
+    @media screen and (max-width: 768px) {
+        .Programs {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .programs-header{
+            flex-direction: column;
+            gap: 1rem;
+            font-size: x-large;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            
+        }
+
+        .programs-categories{
+            flex-direction: column;
+            
+        }
+        
+    }
+
 </style>

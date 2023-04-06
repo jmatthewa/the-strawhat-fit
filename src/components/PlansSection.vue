@@ -50,6 +50,8 @@ export default {
         flex-direction: column;
         gap: 4rem;
         position: relative;
+        margin-left: 10%;
+        margin-right: 10%;
     }
     .plans-blur-1 {
         width: 32rem;
@@ -120,6 +122,16 @@ export default {
         width: 1rem;
     }
 
+    @media screen and (max-width:768px) {
+        .plans{
+            margin: 0;
+            flex-direction: column;
+           gap:.5rem;
+        }
+        .plans>:nth-child(2){
+            transform: none;
+        }
 
+    }
 
 </style>

@@ -85,4 +85,10 @@ export default {
         filter: blur(200px);
         background: rgb(225, 115, 0)
     }
+    @media screen and (max-width: 768px) {
+        .logo-f  {
+            font-size: small;
+        }
+        
+    }
 </style>
