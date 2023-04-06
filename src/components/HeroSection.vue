@@ -1,5 +1,5 @@
 <template>
-    <div class="hero">
+    <div class="hero" id="home">
     <div class="blur hero-blur"></div>
         <div class="left-h">
            <HeaderSection />
@@ -33,9 +33,7 @@
                     <span>Ideal body</span>
                 </div>
                 <div>
-                    <span>
-                        In here we will help you to shape and build your ideal body and live up your life to fullest 
-                    </span>
+                    <span>In here we will help you to shape and build your ideal body and live up your life to fullest</span>
 
                 </div>
            </div>
@@ -299,7 +297,7 @@ export default {
     }
     .hero-image-back {
         position: absolute;
-        top: 4rem;
+        top: 10rem;
         right: 20rem;
         z-index: -1;
         width: 15rem;
@@ -340,6 +338,7 @@ export default {
             flex-direction: column;
             margin-left: 0;
         margin-right: 0;
+
         }
         .hero-blur {
             width: 14rem;

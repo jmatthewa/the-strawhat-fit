@@ -1,5 +1,5 @@
 <template>
-    <div class="Testimonials">
+    <div class="Testimonials" id="testimonials">
         <div class="left-t">
             <span>Testimonials</span>
             <span class="stroke-text">What they</span>
@@ -109,7 +109,7 @@ export default {
                this.selected = this.testimonialsData.length -1
             } else {
                 this.selected--
-                console.log(this.selected);
+    
             }
             
         },

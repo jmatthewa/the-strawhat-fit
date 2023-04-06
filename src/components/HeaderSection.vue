@@ -2,16 +2,16 @@
    <div class="header">
       <img src="../assets/logo1.png" class="logo">
     <div v-if="menuOpened === false && mobile === true"
-    style="background-color: var(--appColor); padding: 0.5rem; border-radius: 5px;"
+    style="background-color: var(--appColor); ; padding: 0.5rem; border-radius: 5px;"
     @click="openMenu">
         <img :src="bars" style="width: 1.5rem; height: 1.5rem;">
     </div>
-        <ul v-else class="header-menu">
-            <li @click="menuOpened=false">Home</li>
-            <li @click="menuOpened=false">Program</li>
-            <li @click="menuOpened=false">Why us</li>
-            <li @click="menuOpened=false">Plans</li>
-            <li @click="menuOpened=false">Testimonials</li>
+        <ul v-else class="header-menu" >
+            <li @click="scroll('home')" value="home">Home</li>
+            <li @click="scroll('programs')">Program</li>
+            <li @click="scroll('reasons')">Why us</li>
+            <li @click="scroll('plans')">Plans</li>
+            <li @click="scroll('testimonials')">Testimonials</li>
         </ul>
 
    </div>
@@ -31,11 +31,18 @@ export default {
     methods: {
         openMenu(){
             this.menuOpened = !this.menuOpened
-        }
+        },
+        scroll(id) {
+            this.menuOpened = !this.menuOpened
+            const element = document.getElementById(id);
+            element.scrollIntoView({ behavior: 'smooth' });
+
+    }
     }
 }
 </script>
 <style>
+  
     .header {
         display:flex;
         justify-content: space-between;
@@ -74,5 +81,6 @@ export default {
             background-color: var(--appColor);
             padding: 2rem;
         }
+  
     }
 </style>

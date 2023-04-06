@@ -7,8 +7,7 @@
                 <a href=""><img :src="instagram" alt=""></a>
                 <a href="https://linkedin.com/in/james-matthew-atanacio-0b0882173"><img :src="linkedin" alt=""></a>
             </div>
-            <div class="logo-f">
-                created by: james matthew &copy;  {{ date }}
+            <div class="logo-f">created by: james matthew &copy;  {{ date }}
             </div>
             </div>
             <div class="blur blur-f-1"></div>

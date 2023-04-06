@@ -1,5 +1,5 @@
 <template>
-    <div class="plans-containter">
+    <div class="plans-containter" id="plans">
         <div class="blur plans-blur-1"></div>
         <div class="blur plans-blur-2"></div>
         <div class="programs-header">
@@ -131,7 +131,15 @@ export default {
         .plans>:nth-child(2){
             transform: none;
         }
-
+        .plans-blur-1 {
+        width: 100%;
+        height: 23rem;
+    }
+    .plans-blur-2{
+        width: 100%;
+        height: 23rem;
+        right: 0rem;
+    }
     }
 
 </style>
