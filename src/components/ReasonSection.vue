@@ -80,6 +80,7 @@ export default {
     
     }
     .left-r {
+
         flex: 1 1;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -113,6 +114,7 @@ export default {
     }
 
     .right-r {
+   
         flex: 1 1;
         text-transform: uppercase;
         gap: 1rem;
@@ -154,7 +156,7 @@ export default {
     .partners > img {
         width: 2.5rem;
     }
-    @media screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
         .Reasons {
             flex-direction: column;
             margin-left: 0;
@@ -182,5 +184,69 @@ export default {
             width: 7rem;
             height: 6rem;
         }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .Reasons {
+            flex-direction: column;
+            margin-left: 5%;
+            margin-right: 5%;
+            padding: 1rem;
+        }
+        .left-r {
+            grid-auto-rows: auto;
+            overflow: hidden;
+
+        }
+        .left-r > :nth-child(1){
+            width: 20rem;
+            height: 37rem;
+        }
+        .left-r > :nth-child(2){
+            width: 25rem;
+            height: 20rem;        }
+        .left-r > :nth-child(3){
+            width: 12rem;
+            height: 16rem;
+        }
+        .left-r > :nth-child(4){
+            width: 12rem;
+            height: 16rem;
+        }
+        .right-r {
+            margin-top: 5rem;
+        }
+    }
+
+    @media only screen and (min-width: 1024px ) and (max-width: 1200px) {
+        .Reasons {
+            flex-direction: column;
+            padding: 1rem;
+          
+        }
+        .left-r {
+            grid-auto-rows: auto;
+            overflow: hidden;
+
+        }
+        .left-r > :nth-child(1){
+            width: 20rem;
+            height: 37rem;
+        }
+        .left-r > :nth-child(2){
+            width: 45rem;
+            height: 20rem;        }
+        .left-r > :nth-child(3){
+            width: 22rem;
+            height: 16rem;
+        }
+        .left-r > :nth-child(4){
+            width: 15rem;
+            height: 16rem;
+        }
+        .right-r {
+            margin-top: 5rem;
+        }
+
     }
 </style>

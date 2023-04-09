@@ -18,7 +18,7 @@
 </template>
 <script>
 import bars from '../assets/bars.png'
-const mobile = window.innerWidth<=768 ? true : false
+const mobile = window.innerWidth<=1024 ? true : false
 
 export default {
     data() {
@@ -69,7 +69,9 @@ export default {
         color: var(--orange);
     }
 
-    @media screen and (max-width: 768px) {
+
+/* CSS code for phones */
+    @media only screen and (max-width: 768px) {
 
         .header>:nth-child(2){
             position: fixed;
@@ -83,4 +85,21 @@ export default {
         }
   
     }
+
+  /* CSS code for tablets */
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .header-menu {
+            flex-direction: column;
+            background-color: var(--appColor);
+            padding: 2rem;
+        }
+        .header>:nth-child(2){
+            position: fixed;
+            right: 2rem;
+            z-index: 5;
+        }
+
+    }
+
+
 </style>

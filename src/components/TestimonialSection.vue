@@ -214,7 +214,7 @@ export default {
         cursor: pointer;
     }
 
-    @media screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
         .Testimonials{
             flex-direction: column;
             margin-left: 0;
@@ -247,4 +247,40 @@ export default {
             left: 0;
         }
     }
+        
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .Testimonials{
+            flex-direction: column;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .left-t>:nth-child(2),
+        .left-t>:nth-child(3) {
+            font-size: xx-large;
+        }
+        .right-t {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .right-t>div{
+            position: relative;
+            display: none;
+        }
+        .right-t>img {
+            top:0;
+            right: 0;
+            position: relative;
+            align-self: center;
+        }
+        .right-t>:last-child{
+            display: block;
+            bottom: 0;
+            left: 0;
+        }
+}
+
+
 </style>

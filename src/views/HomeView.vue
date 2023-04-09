@@ -1,5 +1,7 @@
 <template>
   <div>
+    
+
     <HeroSection />
 
     <ProgramSection />
@@ -9,6 +11,8 @@
     <TestimonialSection />
     <JoinSection />
     <FooterSection />
+
+    
   </div>
 </template>
 
@@ -33,6 +37,8 @@ export default {
     JoinSection,
     FooterSection
   }
-  
+
 }
 </script>
+
+

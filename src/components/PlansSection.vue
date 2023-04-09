@@ -24,7 +24,7 @@
                 <div>
                     <span>See more benefits -></span>
                 </div>
-                <button class="btn"> Join now</button>
+                <button class="btn" @click="scroll('join-us')"> Join now</button>
             </div>
         </div>
     </div>
@@ -38,6 +38,14 @@ export default {
         return {
             plansData : plansData
         }
+    },
+    methods: {
+        scroll(id) {
+        
+            const element = document.getElementById(id);
+            element.scrollIntoView({ behavior: 'smooth' });
+
+    }
     }
 }
 </script>
@@ -60,7 +68,7 @@ export default {
     .plans-blur-2{
         width: 32rem;
         height: 23rem;
-        right: -1rem;
+        right: 1rem;
     }
     .programs-header {
         margin-top: 3rem;
@@ -122,7 +130,7 @@ export default {
         width: 1rem;
     }
 
-    @media screen and (max-width:768px) {
+    @media only screen and (max-width:768px) {
         .plans{
             margin: 0;
             flex-direction: column;
@@ -134,12 +142,39 @@ export default {
         .plans-blur-1 {
         width: 100%;
         height: 23rem;
+        }
+        .plans-blur-2{
+            width: 100%;
+            height: 23rem;
+            right: 0rem;
+        }
     }
-    .plans-blur-2{
-        width: 100%;
-        height: 23rem;
-        right: 0rem;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .plans{
+            margin: 0;
+            flex-direction: column;
+            gap:.5rem;
+        }
+        .plans-blur-1 {
+            width: 100%;
+            height: 23rem;
+        }
+        .plans-blur-2{
+            width: 100%;
+            height: 23rem;
+            right: 0rem;
+        }
+        .programs-header {
+            margin-top: 10rem;
+
+      }
     }
+    @media only screen and (min-width: 1024px ) and (max-width: 1200px) {
+        .programs-header {
+        margin-top: 5rem;
+ 
+    }
+
     }
 
 </style>

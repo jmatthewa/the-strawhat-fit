@@ -61,7 +61,7 @@
         </div>
            
         <div class="right-h">
-            <button class="btn">Join Now</button>
+            <button class="btn" @click="scroll('join-us')">Join Now</button>
 
             <div v-motion 
             :initial="{
@@ -143,6 +143,13 @@ export default {
             Calories : Calories,
             mobile : mobile
         }
+    }, methods: {
+        scroll(id) {
+     
+            const element = document.getElementById(id);
+            element.scrollIntoView({ behavior: 'smooth' });
+
+    }
     }
 }
 </script>
@@ -333,7 +340,7 @@ export default {
 
 
 
-    @media screen and (max-width: 768px){
+    @media only screen and (max-width: 768px){
         .hero {
             flex-direction: column;
             margin-left: 0;
@@ -343,13 +350,17 @@ export default {
         .hero-blur {
             width: 14rem;
         }
+       
+
         .the-best-ad {
             margin-top: 2rem;
+            margin-left: .5rem;
+            left: .5rem;
+            margin-right: .5rem;
             font-size: small;
-            text-align: center;
-            align-self: center;
             transform: scale(0.8);
         }
+
         .hero-text {
             margin-top: 2rem;
             font-size: xx-large;
@@ -404,6 +415,108 @@ export default {
             width: 15rem;
             left: 2rem;
         }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .hero {
+            flex-direction: column;
+            margin-left: 0;
+            margin-right: 0;
+
+        }
+        .hero-blur {
+            width: 14rem;
+        }
+        .the-best-ad {
+            display: flex;
+            margin-top: 5rem;
+            margin-left: 12.5rem;
+            margin-right: .5rem;
+            font-size: normal;
+            transform: scale(1);
+            
+        }
+        .hero-text {
+            margin-top: 8rem;
+            font-size: xxx-large;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-text > div:nth-child(3){
+            margin-top: 4rem;
+            font-size: large;
+            font-weight: normal;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        .hero-buttons{
+            margin-top: 5rem;
+            justify-content: center;
+        }
+        .figures {
+            margin-top: 5rem;
+            justify-content: center;
+        }
+        .figures > div > span:nth-of-type(1){
+            text-align: center;
+            font-size: large;
+
+        }
+        .figures > div > span:nth-of-type(2){
+            font-size: small;
+            
+        }
+        .right-h {
+            margin-top: 5rem;
+            position: relative;
+            background: none;
+        }
+        .heart-rate{
+            left: 10%;
+            top: 2rem;
+        }
+        .calories {
+            position: relative;
+            top: 5rem;
+            left: 50%;
+        }
+        .calories > img {
+            width: 2rem;
+        }
+        .calories>div>:nth-child(2){
+            color: white;
+            font-size: 1rem;
+        }
+        .hero-image{
+            position: relative;
+            width: 20rem;
+            left: 50%;
+            top: 4rem;
+            align-self: center;
+        }
+        .hero-image-back{
+            width: 15rem;
+            left: 30%;
+        }
+    
+    }
+    @media only screen and (min-width: 1024px ) and (max-width: 1200px) {
+        .hero-image {
+       right: 1rem;
+    
+         }
+
+        .calories {
+            top: 40rem;
+            right: 30vw;
+        }
+        .heart-rate {
+
+   
+        right: 10rem;
+        top: 5rem;
+    }
+
     }
 
 </style>

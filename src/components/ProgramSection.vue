@@ -9,7 +9,9 @@
 
 
         <div class="programs-categories"  >
-            <div class="category" v-for="program in programsData" :key="program.heading">
+            <div class="category" v-for="program in programsData" :key="program.heading"
+            
+            @click="scroll('join-us')">
                 
                 <img :src="require(`../assets/${program.fileName}`)">
 
@@ -40,6 +42,14 @@ export default {
             programsData : programsData
 
         }
+    },
+    methods: {
+        scroll(id) {
+   
+            const element = document.getElementById(id);
+            element.scrollIntoView({ behavior: 'smooth' });
+
+    }
     }
 }
 
@@ -109,7 +119,7 @@ export default {
         cursor: pointer;
     }
 
-    @media screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
         .Programs {
             margin-left: 0;
             margin-right: 0;
@@ -129,6 +139,61 @@ export default {
             
         }
         
+    }
+    
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .Programs {
+            margin-top: 10rem;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .programs-header{
+           
+            flex-direction: column;
+            gap: 1rem;
+            font-size: xx-large;
+            align-items: center;
+            justify-content: center;
+    
+            margin-bottom: 4rem;
+            
+        }
+
+
+        .programs-categories{
+            flex-direction: column;
+            
+        }
+        .category>:nth-child(1){
+            
+            width: 2rem;
+            height: 2rem;
+            fill:white;
+        }
+        .category {
+            margin-left: 5%;
+            margin-right: 5%;
+            background-color: gray;
+            padding: 1rem;
+
+            align-items: center;
+        }
+    }
+
+    @media only screen and (min-width: 1024px ) and (max-width: 1200px) {
+        .Programs {
+            margin-top: 10rem;
+        }
+        .programs-header{
+         
+           flex-direction: column;
+           align-items: center;
+            justify-content: center;
+            margin-bottom: 5rem;
+
+           
+       }
+
     }
 
 </style>

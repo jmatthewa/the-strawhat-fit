@@ -88,9 +88,9 @@ export default {
         color: white;
     }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .Join{
-        margin-top: 35rem;
+        margin-top: 30rem;
         flex-direction: column;
         gap: 5rem;
 
@@ -103,4 +103,36 @@ export default {
         padding: 2rem;
     }
 }
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .Join{
+        margin-top: 25rem;
+        flex-direction: column;
+        gap: 5rem;
+        text-align: center;
+
+    }
+    .left-j{
+        font-size: x-large;
+        flex-direction: column;
+    }
+    .right-j {
+        padding: 2rem;
+    }
+    .left-j>hr{
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1024px ) and (max-width: 1200px) {
+    .Join{
+        margin-top: 15rem;
+
+
+    }
+
+    }
 </style>
