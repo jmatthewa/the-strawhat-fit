@@ -40,15 +40,16 @@
 
            <div class="figures">
                 <div>
-                    <span>+140</span>
+                    <span>  <vue3-autocounter ref='counter' :startAmount='100' :endAmount='140' :duration='3' prefix='+'/>
+    </span>
                     <span>expert coaches</span>
                 </div>
                 <div>
-                    <span>+987</span>
+                    <span> <vue3-autocounter ref='counter' :startAmount='947' :endAmount='987' :duration='3' prefix='+'/></span>
                     <span>members joined</span>
                 </div>
                 <div>
-                    <span>+50</span>
+                    <span><vue3-autocounter ref='counter' :startAmount='10' :endAmount='50' :duration='3' prefix='+'/></span>
                     <span>fitness programs</span>
                 </div>
             
