@@ -7,7 +7,6 @@ This is a web application built using Vue.js for managing gym memberships and ex
 ```
 Vue.js
 Vuex
-Vue Router
 Css
 HTML
 ```
